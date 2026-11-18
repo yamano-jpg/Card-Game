@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u5263"
+  faction: 0
+  type: 2
+  cost: 2
+  attack: 2
+  health: 2
+  illustration: {fileID: -933768709301326280, guid: 2720c6fd8cdd6174d94c77549771ebcb, type: 3}
+  effectText: "\u88C5\u5099\u3057\u305F\u30BF\u30FC\u30F3\u304B\u3089\u30EA\u30FC\u30C0\u30FC\u304C\u653B\u6483\u3067\u304D\u308B"
+  effect: {fileID: 0}
+  onPlayEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  onAttackEffect: {fileID: 0}
+  pierce: 0
+  illustrationScale: 0.8
+  illustrationOffset: {x: 0, y: 0}

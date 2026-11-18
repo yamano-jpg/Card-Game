@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u30A6\u30EB\u30D5"
+  faction: 0
+  type: 0
+  cost: 2
+  attack: 2
+  health: 3
+  illustration: {fileID: -5306155063603484044, guid: 0911b4940c617b94a940005b08b62970, type: 3}
+  effectText: 
+  effect: {fileID: 0}
+  pierce: 0

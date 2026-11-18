@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: Slime
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u30B9\u30E9\u30A4\u30E0"
+  faction: 2
+  type: 0
+  cost: 1
+  attack: 1
+  health: 1
+  illustration: {fileID: -630158338622054480, guid: 8d1209b9fdf5a3945b79ae4ceffb04ff, type: 3}
+  effectText: 
+  effect: {fileID: 0}
+  pierce: 0

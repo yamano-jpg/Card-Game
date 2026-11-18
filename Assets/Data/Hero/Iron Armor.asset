@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: Iron Armor
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u9244\u306E\u93A7"
+  faction: 1
+  type: 3
+  cost: 3
+  attack: 0
+  health: 5
+  illustration: {fileID: 5241786390332240612, guid: 4ea9eeb1d9faf684e81d75460b564520, type: 3}
+  effectText: "\u8FFD\u52A0\u3067\u4F53\u529B\u30925\u8FFD\u52A0\u3059\u308B"
+  effect: {fileID: 0}
+  onPlayEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  onAttackEffect: {fileID: 0}
+  pierce: 0
+  illustrationScale: 0.8
+  illustrationOffset: {x: 0, y: 0}

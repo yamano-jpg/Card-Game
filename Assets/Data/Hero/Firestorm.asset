@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: Firestorm
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u30D5\u30A1\u30A4\u30A2\u30B9\u30C8\u30FC\u30E0"
+  faction: 1
+  type: 1
+  cost: 4
+  attack: 0
+  health: 0
+  illustration: {fileID: -3408680597838663119, guid: c9e2c98b424f77848b1cc2a9ab5f3d70, type: 3}
+  effectText: "\u76F8\u624B\u306E\u5834\u306E\u30AD\u30E3\u30E9\u5168\u54E1\u306B2\u30C0\u30E1\u30FC\u30B8"
+  effect: {fileID: 11400000, guid: af1a7b8735f0f734a94546da20c79f70, type: 2}
+  onPlayEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  pierce: 0

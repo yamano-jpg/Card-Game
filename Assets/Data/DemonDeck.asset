@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b29b24a44f19741b3af0d3c97a5bd9, type: 3}
+  m_Name: DemonDeck
+  m_EditorClassIdentifier: Assembly-CSharp::DeckData
+  entries:
+  - card: {fileID: 11400000, guid: bc77b0a2d3774724580e0cd107775bef, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 7a42ad64c3fc54f4dae18ed645554725, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 10d6e6a9f3c51b647a7ef08186d93ff9, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 422f7c5485f042c4790ebde36fa9b622, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 767bcef1243c01a45b12a4fc85ae63d5, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 60b3585147c16a24fbe35ab7a18b2d34, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 7ec9c179bfa5e354da5902deee4634ea, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 4e844405032d3cb4299f87ab4dbb9c19, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: 520f02ec2c59c834f8f28561b9a989ad, type: 2}
+    count: 3
+  - card: {fileID: 11400000, guid: f567dda5aa6271e4f966afe78666c5a4, type: 2}
+    count: 3

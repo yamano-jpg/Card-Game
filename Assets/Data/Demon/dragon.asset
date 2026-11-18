@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: dragon
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u30C9\u30E9\u30B4\u30F3"
+  faction: 2
+  type: 0
+  cost: 5
+  attack: 5
+  health: 6
+  illustration: {fileID: 4747348827706616307, guid: 7c8a1ce6c86e3054eb25bb6abe905a88, type: 3}
+  effectText: 
+  effect: {fileID: 0}
+  pierce: 0

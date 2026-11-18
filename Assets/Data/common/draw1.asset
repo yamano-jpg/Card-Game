@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c6aeda856bac04a8b47d8025359b33, type: 3}
+  m_Name: draw1
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: "\u30C9\u30ED\u30FC"
+  faction: 0
+  type: 1
+  cost: 1
+  attack: 0
+  health: 0
+  illustration: {fileID: -6284038876460532381, guid: 4066dd2d5c0ddc7418b59e558199d146, type: 3}
+  effectText: "\u5C71\u672D\u304B\u30891\u679A\u5F15\u304F"
+  effect: {fileID: 11400000, guid: 87be42e655b8e4042af1d167edfcdc3d, type: 2}
+  onPlayEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  pierce: 0
+  illustrationScale: 1
+  illustrationOffset: {x: 0, y: 0}
