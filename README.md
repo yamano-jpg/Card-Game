@@ -8,7 +8,7 @@ Unity 6 / C# で制作した、制作中のプロトタイプです。
 
 
 
-\*\*プレイ（ブラウザ・PC向け）\*\*: 【https://souta0507.itch.io/cardgame】
+\*\*プレイ（ブラウザ・PC向け）\*\*: https://souta0507.itch.io/cardgame
 
 
 
