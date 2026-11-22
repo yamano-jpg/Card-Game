@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 3bb1382580b19dc4ea21ae294989ee15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4861904603370030673
+    second: gauge_ring-segmented_cyber-cyan_01_512_0
+  - first:
+      213: 7748746213294759727
+    second: gauge_ring-segmented_cyber-cyan_01_512_1
+  - first:
+      213: 1641991171415053476
+    second: gauge_ring-segmented_cyber-cyan_01_512_2
+  - first:
+      213: 8810793085160225265
+    second: gauge_ring-segmented_cyber-cyan_01_512_3
+  - first:
+      213: 2691202276213275657
+    second: gauge_ring-segmented_cyber-cyan_01_512_4
+  - first:
+      213: 3686889868065683284
+    second: gauge_ring-segmented_cyber-cyan_01_512_5
+  - first:
+      213: 9041686926562922600
+    second: gauge_ring-segmented_cyber-cyan_01_512_6
+  - first:
+      213: -8978408805874479664
+    second: gauge_ring-segmented_cyber-cyan_01_512_7
+  - first:
+      213: 8554047212242849629
+    second: gauge_ring-segmented_cyber-cyan_01_512_8
+  - first:
+      213: 3396511414855470443
+    second: gauge_ring-segmented_cyber-cyan_01_512_9
+  - first:
+      213: -8230288368068153233
+    second: gauge_ring-segmented_cyber-cyan_01_512_10
+  - first:
+      213: -7923525835260263315
+    second: gauge_ring-segmented_cyber-cyan_01_512_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 327
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15605bf2a74f87340800000000000000
+      internalID: 4861904603370030673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 370
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f561a50a3198b60800000000000000
+      internalID: 7748746213294759727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 370
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a49580554689c610800000000000000
+      internalID: 1641991171415053476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_3
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 327
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9717e11a9364a70800000000000000
+      internalID: 8810793085160225265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_4
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 265
+        width: 111
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c3a6c2632195520800000000000000
+      internalID: 2691202276213275657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 265
+        width: 111
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457ba001dc67a2330800000000000000
+      internalID: 3686889868065683284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 158
+        width: 111
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8609314da568a7d70800000000000000
+      internalID: 9041686926562922600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 70
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddcc9db2c8466380800000000000000
+      internalID: -8978408805874479664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_8
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 70
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5fc7a54e9416b670800000000000000
+      internalID: 8554047212242849629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_9
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 158
+        width: 111
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d0506e225d22f20800000000000000
+      internalID: 3396511414855470443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_10
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 31
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60b44ec55428cd80800000000000000
+      internalID: -8230288368068153233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gauge_ring-segmented_cyber-cyan_01_512_11
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 31
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d648ea4cb3bf90290800000000000000
+      internalID: -7923525835260263315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gauge_ring-segmented_cyber-cyan_01_512_0: 4861904603370030673
+      gauge_ring-segmented_cyber-cyan_01_512_1: 7748746213294759727
+      gauge_ring-segmented_cyber-cyan_01_512_10: -8230288368068153233
+      gauge_ring-segmented_cyber-cyan_01_512_11: -7923525835260263315
+      gauge_ring-segmented_cyber-cyan_01_512_2: 1641991171415053476
+      gauge_ring-segmented_cyber-cyan_01_512_3: 8810793085160225265
+      gauge_ring-segmented_cyber-cyan_01_512_4: 2691202276213275657
+      gauge_ring-segmented_cyber-cyan_01_512_5: 3686889868065683284
+      gauge_ring-segmented_cyber-cyan_01_512_6: 9041686926562922600
+      gauge_ring-segmented_cyber-cyan_01_512_7: -8978408805874479664
+      gauge_ring-segmented_cyber-cyan_01_512_8: 8554047212242849629
+      gauge_ring-segmented_cyber-cyan_01_512_9: 3396511414855470443
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

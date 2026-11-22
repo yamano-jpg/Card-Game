@@ -14,8 +14,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private DeckData playerDeckData;
     [SerializeField] private DeckData enemyDeckData;
     [SerializeField] private TMP_Text manaText;
-    [SerializeField] private TMP_Text playerHealthText;
-    [SerializeField] private TMP_Text enemyHealthText;
     [SerializeField] private TMP_Text resultText;
     [SerializeField] private Button endTurnButton;
     [SerializeField] private Button playerLeaderButton;
@@ -36,6 +34,20 @@ public class GameController : MonoBehaviour
     [SerializeField] private AudioClip winSe;
     [SerializeField] private AudioClip loseSe;
     [SerializeField] private TMP_Text messageText; // 「マナが足りません」などを出す
+    [Header("リーダー表示")]
+    [SerializeField] private Image playerPortrait;
+    [SerializeField] private Image enemyPortrait;
+    [SerializeField] private Image playerLeaderFrame;   // 攻撃役に選んだとき、色が変わる枠
+    [SerializeField] private TMP_Text playerHealthNumber;
+    [SerializeField] private TMP_Text enemyHealthNumber;
+    [SerializeField] private GameObject playerArmorBadge;
+    [SerializeField] private TMP_Text playerArmorNumber;
+    [SerializeField] private GameObject enemyArmorBadge;
+    [SerializeField] private TMP_Text enemyArmorNumber;
+    [SerializeField] private GameObject playerWeaponBadge;
+    [SerializeField] private TMP_Text playerWeaponNumber;
+    [SerializeField] private GameObject enemyWeaponBadge;
+    [SerializeField] private TMP_Text enemyWeaponNumber;
 
     private PlayerState player;
     private PlayerState enemy;
@@ -65,6 +77,8 @@ public class GameController : MonoBehaviour
 
         DeckData playerDeck = GameSession.PlayerDeck != null ? GameSession.PlayerDeck : playerDeckData;
         DeckData enemyDeck = GameSession.EnemyDeck != null ? GameSession.EnemyDeck : enemyDeckData;
+        ApplyPortrait(playerPortrait, playerDeck);
+        ApplyPortrait(enemyPortrait, enemyDeck);
         player.SetDeck(playerDeck.ToCardList());
         enemy.SetDeck(enemyDeck.ToCardList());
 
@@ -423,12 +437,28 @@ public class GameController : MonoBehaviour
         RefreshViews();
     }
 
-    private string LeaderText(string label, PlayerState p)
+    // デッキに設定された絵・大きさ・位置を、リーダーの表示に反映する
+    private void ApplyPortrait(Image portrait, DeckData deck)
     {
-        string text = label + " HP " + p.Health;
-        if (p.Armor != null) text += "  防具 " + p.Armor.CurrentHealth;
-        if (p.Weapon != null) text += "  武器 " + p.Weapon.Data.attack + "/" + p.Weapon.CurrentHealth;
-        return text;
+        if (portrait == null || deck.leaderPortrait == null) return;
+
+        portrait.sprite = deck.leaderPortrait;
+        RectTransform rect = portrait.rectTransform;
+        rect.sizeDelta = deck.leaderPortraitSize;
+        rect.anchoredPosition = deck.leaderPortraitOffset;
+    }
+
+    private void UpdateLeaderView(PlayerState p, TMP_Text healthNumber, GameObject armorBadge, TMP_Text armorNumber, GameObject weaponBadge, TMP_Text weaponNumber)
+    {
+        healthNumber.text = p.Health.ToString();
+
+        bool hasArmor = p.Armor != null;
+        armorBadge.SetActive(hasArmor);
+        if (hasArmor) armorNumber.text = p.Armor.CurrentHealth.ToString();
+
+        bool hasWeapon = p.Weapon != null;
+        weaponBadge.SetActive(hasWeapon);
+        if (hasWeapon) weaponNumber.text = p.Weapon.Data.attack + "/" + p.Weapon.CurrentHealth;
     }
 
     // このカードが、いま、どちらかの盤面にいるか
@@ -473,11 +503,14 @@ public class GameController : MonoBehaviour
         {
             detailCard.gameObject.SetActive(false);
         }
-        manaText.text = "マナ " + player.Mana + " / " + player.MaxMana;
+        manaText.text = player.Mana + " / " + player.MaxMana;
 
-        string selectedMark = selectedAttackerSlot == LeaderAttacker ? "  [攻撃]" : "";
-        playerHealthText.text = LeaderText("自分", player) + selectedMark;
-        enemyHealthText.text = LeaderText("相手", enemy);
+        UpdateLeaderView(player, playerHealthNumber, playerArmorBadge, playerArmorNumber, playerWeaponBadge, playerWeaponNumber);
+        UpdateLeaderView(enemy, enemyHealthNumber, enemyArmorBadge, enemyArmorNumber, enemyWeaponBadge, enemyWeaponNumber);
+        if (playerLeaderFrame != null)
+        {
+            playerLeaderFrame.color = selectedAttackerSlot == LeaderAttacker ? new Color(1f, 0.85f, 0.3f) : Color.white;
+        }
         UpdateResult();
     }
 

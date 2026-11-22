@@ -33,3 +33,6 @@ MonoBehaviour:
     count: 3
   - card: {fileID: 11400000, guid: f567dda5aa6271e4f966afe78666c5a4, type: 2}
     count: 3
+  leaderPortrait: {fileID: -7505446482824969679, guid: 3dfbffa3e494c9b489902c09ddc2a3b1, type: 3}
+  leaderPortraitSize: {x: 350, y: 450}
+  leaderPortraitOffset: {x: 0, y: -5}

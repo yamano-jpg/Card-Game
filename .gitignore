@@ -116,6 +116,16 @@ InitTestScene*.unity*
 /Assets/Art/Frames/*.png
 /Assets/Art/Monsters/*.png
 /Assets/Art/Heroes/*.png
+!/Assets/Art/Heroes/*.meta
 /Assets/Art/Weapons/*.png
 /Assets/Art/Magic/*.png
 /Assets/test/
+/Assets/Art/Backgrounds/*.png
+/Assets/Art/Backgrounds/*.jpg
+/Assets/Art/Backgrounds/*
+!/Assets/Art/Backgrounds/*.meta
+/Assets/Art/UIFrames/*
+!/Assets/Art/UIFrames/*.meta
+/Assets/Art/Demons/*
+!/Assets/Art/Demons/*.meta
+
