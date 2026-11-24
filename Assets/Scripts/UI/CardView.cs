@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    private const float ItemIconSize = 200f; // 魔法・装備のアイコンの大きさ
-    private const float HoverScale = 1.5f;   // カーソルを合わせたとき、大きくなる倍率
+    private const float ItemIconSize = 200f;   // 魔法・装備のアイコンの大きさ
+    private const float HoverScale = 1.5f;     // カーソルを合わせたとき、大きくなる倍率
+    private const float SelectedScale = 1.15f; // 手札で選んでいるカードの倍率
+    private static readonly Color HighlightColor = new Color(1f, 0.85f, 0.3f);
 
     [Header("枠")]
     [SerializeField] private Image highlightImage;
@@ -29,8 +31,10 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Vector2 defaultArtSize;
     private Vector2 defaultArtPos;
     private Vector3 baseScale;
-    private Canvas ownCanvas;
     private bool hoverEnabled;
+    private bool hovering;
+    private bool selected;
+    private bool pulsing;
 
     private void Awake()
     {
@@ -39,7 +43,16 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         defaultArtPos = artRect.anchoredPosition;
 
         baseScale = transform.localScale;
-        ownCanvas = GetComponent<Canvas>();
+    }
+
+    // 選ばれているカードの縁を、ゆっくり脈打たせる
+    private void Update()
+    {
+        if (!pulsing || highlightImage == null) return;
+
+        Color c = HighlightColor;
+        c.a = 0.65f + 0.35f * Mathf.Sin(Time.unscaledTime * 6f);
+        highlightImage.color = c;
     }
 
     // 手札用: 普段は小さく、カーソルを合わせると大きくなって、前に出る
@@ -47,36 +60,48 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         hoverEnabled = true;
         ((RectTransform)transform).pivot = new Vector2(0.5f, 0f); // 下の端を基準に、上へ大きくなる
-        SetCompact(true);
+        RefreshVisual();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!hoverEnabled) return;
-
-        transform.localScale = baseScale * HoverScale;
-        SetCompact(false);
-        if (ownCanvas != null)
-        {
-            ownCanvas.overrideSorting = true;
-            ownCanvas.sortingOrder = 50;
-        }
-        Canvas c = GetComponent<Canvas>();
-        if (c == null) c = gameObject.AddComponent<Canvas>();
-        c.overrideSorting = true;
-        c.sortingOrder = 10;
-        if (GetComponent<GraphicRaycaster>() == null) gameObject.AddComponent<GraphicRaycaster>();
+        hovering = true;
+        RefreshVisual();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (!hoverEnabled) return;
+        hovering = false;
+        RefreshVisual();
+    }
 
-        transform.localScale = baseScale;
-        SetCompact(true);
-        if (ownCanvas != null) ownCanvas.overrideSorting = false;
+    // 手札のカードの、大きさと前後の見え方を決める
+    private void RefreshVisual()
+    {
+        if (!hoverEnabled) return;
+
+        float scale = hovering ? HoverScale : (selected ? SelectedScale : 1f);
+        transform.localScale = baseScale * scale;
+        SetCompact(!hovering);
+        BringToFront(hovering || selected);
+    }
+
+    private void BringToFront(bool front)
+    {
         Canvas c = GetComponent<Canvas>();
-        if (c != null) c.overrideSorting = false;
+        if (front)
+        {
+            if (c == null) c = gameObject.AddComponent<Canvas>();
+            c.overrideSorting = true;
+            c.sortingOrder = 10;
+            if (GetComponent<GraphicRaycaster>() == null) gameObject.AddComponent<GraphicRaycaster>();
+        }
+        else if (c != null)
+        {
+            c.overrideSorting = false;
+        }
     }
 
     public void SetData(CardData data)
@@ -100,7 +125,19 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // 選ばれているカードの強調
     public void SetHighlight(bool on)
     {
+        selected = on;
+        pulsing = on;
         highlightImage.enabled = on;
+        if (on) highlightImage.color = HighlightColor;
+        RefreshVisual();
+    }
+
+    // 攻撃できない相手などを、暗くする
+    public void SetDim(bool dim)
+    {
+        CanvasGroup group = GetComponent<CanvasGroup>();
+        if (group == null) group = gameObject.AddComponent<CanvasGroup>();
+        group.alpha = dim ? 0.45f : 1f;
     }
 
     private void Show(CardData data, int health)
@@ -144,7 +181,7 @@ public class CardView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private string BuildEffectText(CardData data)
     {
         string text = data.effectText;
-        if (data.pierce) text = "貫通: 前列を攻撃したとき、後ろにも半分のダメージ\n" + text;
+        if (data.pierce) text = "波及: 前列を攻撃したとき、後ろにも半分のダメージ\n" + text;
         return text;
     }
 

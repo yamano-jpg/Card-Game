@@ -113,7 +113,9 @@ public static class Combat
 
         if (slot == BoardState.CenterBackSlot)
         {
-            owner.TakeDamage(LeaderDamageByCost(card.Data.cost));
+            int damage = LeaderDamageByCost(card.Data.cost);
+            owner.TakeDamage(damage);
+            owner.RaiseCenterBackFell(card, damage);
         }
 
         // 倒されたときの効果(撃破時)

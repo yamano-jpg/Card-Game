@@ -19,6 +19,15 @@ public class PlayerState
     public int MaxMana { get; private set; }
     public int FatigueCount { get; private set; }           // デッキ切れでカードを引こうとした回数
     public event System.Action<int> Fatigued;               // デッキ切れのダメージを受けたとき(ダメージ量を渡す)
+    // 中央後列のカードが倒されて、リーダーがダメージを受けたときに知らせる(画面の演出用)
+    public event System.Action<CardInstance, int> CenterBackFell;
+    // リーダー(または防具)が、ダメージを受けたときに知らせる(画面の演出用)
+    public event System.Action<int> Damaged;
+
+    public void RaiseCenterBackFell(CardInstance card, int damage)
+    {
+        CenterBackFell?.Invoke(card, damage);
+    }
     public int Mana { get; private set; }
 
     public void SetDeck(List<CardData> cards)
@@ -93,6 +102,10 @@ public class PlayerState
 
     public void TakeDamage(int amount)
     {
+        if (amount <= 0) return;
+
+        int total = amount;
+
         if (Armor != null)
         {
             int absorbed = System.Math.Min(amount, Armor.CurrentHealth);
@@ -103,5 +116,7 @@ public class PlayerState
 
         Health -= amount;
         if (Health < 0) Health = 0;
+
+        Damaged?.Invoke(total);
     }
 }

@@ -119,6 +119,112 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &34403975
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1573924796}
+    m_Modifications:
+    - target: {fileID: 816798760387315539, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_Name
+      value: BackgroundImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8652213744156247152, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4988023153683684363, guid: a5f53885219b0884b9046ac8532a1f34, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+--- !u!224 &34403976 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2419425444722871792, guid: 801deb79d13e9ec4cbfa2c6ed2ca8450, type: 3}
+  m_PrefabInstance: {fileID: 34403975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &84063319
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,11 +284,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u3010\u30AF\u30EC\u30B8\u30C3\u30C8\u3011\r\n\r\nBGM\r\n\u30D5\u30EA\u30FCBGM\u30FB\u97F3\u697D\u7D20\u6750MusMus
     https://musmus.main.jp\r\nBGM\uFF1AH/MIX GALLERY https://www.hmix.net\r\n\r\n\u52B9\u679C\u97F3\r\n\u30D5\u30EA\u30FCBGM\u30FB\u97F3\u697D\u7D20\u6750MusMus
-    https://musmus.main.jp\r\n\u52B9\u679C\u97F3\u30E9\u30DC https://soundeffect-lab.info\r\n\r\n\u30AB\u30FC\u30C9\u30D5\u30EC\u30FC\u30E0\r\n\u30B2\u30FC\u30E0\u306E\u30A4\u30E9\u30B9\u30C8\u5C4B\u3055\u3093\r\n\r\n\u30E2\u30F3\u30B9\u30BF\u30FC\u7D20\u6750\r\n\u7121\u6599\u30E2\u30F3\u30B9\u30BF\u30FC\u7D20\u6750\u5C4B
-    \u301C\u5546\u7528OK\u306E\u6575\u30AD\u30E3\u30E9\u7ACB\u3061\u7D75\u30D5\u30EA\u30FC\u7D20\u6750\u301C\r\nhttps://xn--zckm7hwc3bw468bgeql23b.jp\r\n\uFF08\u4E00\u90E8\u306E\u7D20\u6750\u306F\u3001\u751F\u6210AI\u304C\u4F7F\u308F\u308C\u3066\u3044\u307E\u3059\uFF09\r\n\r\n\u9B54\u6CD5\u30A2\u30A4\u30B3\u30F3\r\n250
-    magical icons\uFF08batareya\uFF09\r\nhttps://batareya.itch.io/250-magical-icons-pixel-art-icons\r\n\uFF08AI\u3067\u4F5C\u6210\u3055\u308C\u305F\u7D20\u6750\u3067\u3059\uFF09\r\n\r\n\u6B66\u5668\u30FB\u9632\u5177\u30A2\u30A4\u30B3\u30F3\r\n38
-    Free Fantasy Weapons & Armor Icons - RPG Sampler\uFF08AssetSmithy\uFF09\r\nhttps://assetsmithy.itch.io/38-free-fantasy-weapons-armor-icons-rpg-sampler\r\n\uFF08AI\u3067\u751F\u6210\u3055\u308C\u305F\u7D20\u6750\u3092\u3001\u4F5C\u8005\u304C\u624B\u4F5C\u696D\u3067\u4FEE\u6B63\u3057\u305F\u3082\u306E\u3067\u3059\uFF09\r\n\r\n\u30D5\u30A9\u30F3\u30C8\r\nNoto
-    Sans JP\uFF08SIL Open Font License 1.1\uFF09"
+    https://musmus.main.jp\r\n\u52B9\u679C\u97F3\u30E9\u30DC https://soundeffect-lab.info\r\n\r\n\u80CC\u666F\r\n\u30102000\u679A\u8D85\u3011\u7121\u6599\u80CC\u666F\uFF08sozaiya-create\uFF09\r\nhttps://booth.pm/ja/items/4945035\r\n(AI\u751F\u6210\u306E\u7D20\u6750\u3067\u3059)\r\n\r\n\u30AB\u30FC\u30C9\u30D5\u30EC\u30FC\u30E0\r\n\u30B2\u30FC\u30E0\u306E\u30A4\u30E9\u30B9\u30C8\u5C4B\u3055\u3093\r\n\r\nUI\u67A0\r\n\u30D5\u30A1\u30F3\u30BF\u30B8\u30FCUI\u7D20\u6750\u96C6\uFF08\u68EE\u306E\u5965\u306E\u96A0\u308C\u91CC\uFF09\r\nhttps://booth.pm/ja/items/9668352\r\n\r\n\u7ACB\u3061\u7D75\uFF08\u52C7\u8005\uFF09\r\n\u30D5\u30A1\u30F3\u30BF\u30B8\u30FC\u7ACB\u3061\u7D75\u7D20\u6750\uFF08\u30D5\u30EA\u30FC\uFF09\uFF08DigitalDepot\uFF09\r\nhttps://booth.pm/ja/items/7939273\r\n(AI\u751F\u6210\u7D20\u6750\u3092\u30D9\u30FC\u30B9\u306B\u4F5C\u8005\u304C\u8ABF\u6574\u3057\u305F\u3082\u306E\u3067\u3059)\r\n\r\n\u7ACB\u3061\u7D75\uFF08\u9B54\u738B\uFF09\r\n\u3010\u30D5\u30EA\u30FC\u7D20\u6750\u3011\u30AD\u30E3\u30E9\uFF12\uFF10\u7A2E
+    \u7ACB\u3061\u7D75\u7D20\u6750\u96C6\uFF08cogabushi\uFF09\r\nhttps://booth.pm/ja/items/5558913\r\n(AI\u751F\u6210\u306E\u7D20\u6750\u3067\u3059)\r\n\r\n\u30E2\u30F3\u30B9\u30BF\u30FC\u7D20\u6750\r\n\u7121\u6599\u30E2\u30F3\u30B9\u30BF\u30FC\u7D20\u6750\u5C4B
+    \u301C\u5546\u7528OK\u306E\u6575\u30AD\u30E3\u30E9\u7ACB\u3061\u7D75\u30D5\u30EA\u30FC\u7D20\u6750\u301C\r\nhttps://xn--zckm7hwc3bw468bgeql23b.jp\r\n(\u4E00\u90E8\u306E\u7D20\u6750\u306F\u3001\u751F\u6210AI\u304C\u4F7F\u308F\u308C\u3066\u3044\u307E\u3059)\r\n\r\n\u9B54\u6CD5\u30A2\u30A4\u30B3\u30F3\r\n250
+    magical icons\uFF08batareya\uFF09\r\nhttps://batareya.itch.io/250-magical-icons-pixel-art-icons\r\n(AI\u3067\u4F5C\u6210\u3055\u308C\u305F\u7D20\u6750\u3067\u3059)\r\n\r\n\u6B66\u5668\u30FB\u9632\u5177\u30A2\u30A4\u30B3\u30F3\r\n38
+    Free Fantasy Weapons & Armor Icons - RPG Sampler\uFF08AssetSmithy\uFF09\r\nhttps://assetsmithy.itch.io/38-free-fantasy-weapons-armor-icons-rpg-sampler\r\n(AI\u3067\u751F\u6210\u3055\u308C\u305F\u7D20\u6750\u3092\u3001\u4F5C\u8005\u304C\u624B\u4F5C\u696D\u3067\u4FEE\u6B63\u3057\u305F\u3082\u306E\u3067\u3059)\r\n\r\nUI\u7D20\u6750\uFF08\u30DC\u30BF\u30F3\u30FB\u30EA\u30F3\u30B0\u30FB\u30D0\u30C3\u30B8\uFF09\r\nFree
+    Game UI Assets (CC0) https://freegameui.net/\r\n\r\n\u30D5\u30A9\u30F3\u30C8\r\nNoto
+    Sans JP(SIL Open Font License 1.1)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b81cfec233627b4ebee9fb0a307ecca, type: 2}
   m_sharedMaterial: {fileID: -1800468827671694644, guid: 5b81cfec233627b4ebee9fb0a307ecca, type: 2}
@@ -982,7 +1090,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 157802137}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4009654
+  m_Size: 0.23756875
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1222,6 +1330,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 34403976}
   - {fileID: 1370713645}
   - {fileID: 173548129}
   m_Father: {fileID: 0}

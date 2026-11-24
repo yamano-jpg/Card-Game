@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private HandView handView;
     [SerializeField] private DeckData playerDeckData;
     [SerializeField] private DeckData enemyDeckData;
-    [SerializeField] private TMP_Text manaText;
+    [SerializeField] private TMP_Text manaText;       // 自分のマナ
+    [SerializeField] private TMP_Text enemyManaText;  // 相手のマナ
     [SerializeField] private TMP_Text resultText;
     [SerializeField] private Button endTurnButton;
     [SerializeField] private Button playerLeaderButton;
@@ -48,6 +49,13 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text playerWeaponNumber;
     [SerializeField] private GameObject enemyWeaponBadge;
     [SerializeField] private TMP_Text enemyWeaponNumber;
+    [Header("やられ演出")]
+    [SerializeField] private LeaderHitEffect hitEffect;
+    [SerializeField] private RectTransform playerLeaderRect;
+    [SerializeField] private RectTransform enemyLeaderRect;
+    [SerializeField] private Image enemyLeaderFrame;
+    [SerializeField] private RectTransform playerCenterBackSlot; // 自分の中央後列のマス
+    [SerializeField] private RectTransform enemyCenterBackSlot;  // 相手の中央後列のマス
 
     private PlayerState player;
     private PlayerState enemy;
@@ -66,6 +74,10 @@ public class GameController : MonoBehaviour
         enemy.Opponent = player;
         player.Fatigued += damage => ShowMessage("デッキ切れ！ 自分のリーダーに" + damage + "ダメージ");
         enemy.Fatigued += damage => ShowMessage("デッキ切れ！ 相手のリーダーに" + damage + "ダメージ");
+        player.CenterBackFell += (card, damage) => PlayCenterBackFell(playerCenterBackSlot, playerLeaderRect, playerLeaderFrame, damage);
+        enemy.CenterBackFell += (card, damage) => PlayCenterBackFell(enemyCenterBackSlot, enemyLeaderRect, enemyLeaderFrame, damage);
+        player.Damaged += damage => PlayDamaged(playerLeaderRect, playerLeaderFrame, damage);
+        enemy.Damaged += damage => PlayDamaged(enemyLeaderRect, enemyLeaderFrame, damage);
         resultText.text = "";
         if (messageText != null) messageText.gameObject.SetActive(false);
 
@@ -104,6 +116,18 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         if (AudioManager.Instance != null) AudioManager.Instance.SuppressAutoClick = false;
+    }
+
+    private void PlayCenterBackFell(RectTransform slot, RectTransform leader, Image frame, int damage)
+    {
+        if (hitEffect == null || slot == null || leader == null) return;
+        hitEffect.Play(slot.position, leader, frame, damage);
+    }
+
+    private void PlayDamaged(RectTransform leader, Image frame, int damage)
+    {
+        if (hitEffect == null || leader == null) return;
+        hitEffect.PlayDamage(leader, frame, damage);
     }
 
     // 画面に、短いメッセージを、1.5秒だけ出す
@@ -461,6 +485,40 @@ public class GameController : MonoBehaviour
         if (hasWeapon) weaponNumber.text = p.Weapon.Data.attack + "/" + p.Weapon.CurrentHealth;
     }
 
+    // 手札のキャラを選んでいる間、出せる空きマスを光らせる
+    private SlotHint PlayerBoardHint(int slot)
+    {
+        if (selectedHandIndex < 0 || selectedHandIndex >= player.Hand.Count) return SlotHint.None;
+
+        CardInstance card = player.Hand[selectedHandIndex];
+        bool canPlace = card.Data.type == CardType.Unit
+                        && player.Board.GetCard(slot) == null
+                        && player.CanPay(card.Data.cost);
+        return canPlace ? SlotHint.Placeable : SlotHint.None;
+    }
+
+    // 攻撃役か、対象を選ぶ魔法を選んでいる間、狙える相手を赤く、狙えない相手を暗くする
+    private SlotHint EnemyBoardHint(int slot)
+    {
+        if (enemy.Board.GetCard(slot) == null) return SlotHint.None;
+
+        if (selectedAttackerSlot >= 0)
+        {
+            return Combat.CanTargetCard(enemy, slot) ? SlotHint.Attackable : SlotHint.Blocked;
+        }
+
+        if (SelectedSpellNeedsTarget()) return SlotHint.Attackable;
+        return SlotHint.None;
+    }
+
+    private bool SelectedSpellNeedsTarget()
+    {
+        if (selectedHandIndex < 0 || selectedHandIndex >= player.Hand.Count) return false;
+
+        CardData data = player.Hand[selectedHandIndex].Data;
+        return data.type == CardType.Spell && data.effect != null && data.effect.NeedsTarget;
+    }
+
     // このカードが、いま、どちらかの盤面にいるか
     private bool IsOnBoard(CardInstance card)
     {
@@ -473,8 +531,8 @@ public class GameController : MonoBehaviour
 
     private void RefreshViews()
     {
-        boardView.Refresh(player.Board, selectedAttackerSlot);
-        enemyBoardView.Refresh(enemy.Board);
+        boardView.Refresh(player.Board, selectedAttackerSlot, PlayerBoardHint);
+        enemyBoardView.Refresh(enemy.Board, -1, EnemyBoardHint);
         handView.Refresh(player.Hand, selectedHandIndex);
         // 倒されて、盤面から消えたカードの詳細は、消す
         if (inspectedCard != null && !IsOnBoard(inspectedCard)) inspectedCard = null;
@@ -504,6 +562,7 @@ public class GameController : MonoBehaviour
             detailCard.gameObject.SetActive(false);
         }
         manaText.text = player.Mana + " / " + player.MaxMana;
+        if (enemyManaText != null) enemyManaText.text = enemy.Mana + " / " + enemy.MaxMana;
 
         UpdateLeaderView(player, playerHealthNumber, playerArmorBadge, playerArmorNumber, playerWeaponBadge, playerWeaponNumber);
         UpdateLeaderView(enemy, enemyHealthNumber, enemyArmorBadge, enemyArmorNumber, enemyWeaponBadge, enemyWeaponNumber);
