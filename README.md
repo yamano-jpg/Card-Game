@@ -74,34 +74,27 @@ Unity 6 / C# で制作した、制作中のプロトタイプです。
 
 
 
-\## 素材について
-
-
+## 素材について
 
 このリポジトリには、第三者の素材(画像・音声)のファイルは含まれていません。そのため、リポジトリをそのまま開いても、イラストや音は再現されません。プレイするには、上のitch.ioのページをご利用ください。
 
-
+※ゲーム内のイラスト・背景・アイコンの多くは、AI生成素材(配布元の規約に従って利用)を使用しています。
+ルール処理、効果の設計、CPU、UI演出などのプログラムは、すべて自作です。
 
 使用している素材の出どころとクレジットは、次のとおりです。
 
-
-
-\- BGM: フリーBGM・音楽素材MusMus https://musmus.main.jp / H/MIX GALLERY https://www.hmix.net
-
-\- 効果音: フリーBGM・音楽素材MusMus https://musmus.main.jp / 効果音ラボ https://soundeffect-lab.info
-
-\- カードフレーム: ゲームのイラスト屋さん
-
-\- モンスター素材: 無料モンスター素材屋 https://xn--zckm7hwc3bw468bgeql23b.jp (一部の素材は生成AIが使われています)
-
-\- 魔法アイコン: 250 magical icons (batareya) https://batareya.itch.io/250-magical-icons-pixel-art-icons (AIで作成された素材です)
-
-\- 武器・防具アイコン: 38 Free Fantasy Weapons \& Armor Icons - RPG Sampler (AssetSmithy) https://assetsmithy.itch.io/38-free-fantasy-weapons-armor-icons-rpg-sampler (AIで生成された素材を、作者が手作業で修正したものです)
-
-\- ボタン・アイコン: 無料ゲームボタン素材 (CC0)
-
-\- フォント: Noto Sans JP (SIL Open Font License 1.1。`Licenses/OFL.txt` を参照)
-
+- BGM: フリーBGM・音楽素材MusMus https://musmus.main.jp / H/MIX GALLERY https://www.hmix.net
+- 効果音: フリーBGM・音楽素材MusMus https://musmus.main.jp / 効果音ラボ https://soundeffect-lab.info
+- 背景: 【2000枚超】無料背景 (sozaiya-create) https://booth.pm/ja/items/4945035 (AI生成の素材です)
+- カードフレーム: ゲームのイラスト屋さん
+- UI枠: ファンタジーUI素材集 (森の奥の隠れ里) https://booth.pm/ja/items/9668352
+- 立ち絵(勇者): ファンタジー立ち絵素材(フリー) (DigitalDepot) https://booth.pm/ja/items/7939273 (AI生成素材をベースに作者が調整したものです)
+- 立ち絵(魔王): 【フリー素材】キャラ２０種 立ち絵素材集 (cogabushi) https://booth.pm/ja/items/5558913 (AI生成の素材です)
+- モンスター素材: 無料モンスター素材屋 https://xn--zckm7hwc3bw468bgeql23b.jp (一部の素材は生成AIが使われています)
+- 魔法アイコン: 250 magical icons (batareya) https://batareya.itch.io/250-magical-icons-pixel-art-icons (AIで作成された素材です)
+- 武器・防具アイコン: 38 Free Fantasy Weapons & Armor Icons - RPG Sampler (AssetSmithy) https://assetsmithy.itch.io/38-free-fantasy-weapons-armor-icons-rpg-sampler (AIで生成された素材を、作者が手作業で修正したものです)
+- UI素材(ボタン・リング・バッジ): Free Game UI Assets (CC0) https://freegameui.net/
+- フォント: Noto Sans JP (SIL Open Font License 1.1。`Licenses/OFL.txt` を参照)
 
 
 \## ライセンス
