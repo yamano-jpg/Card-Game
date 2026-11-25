@@ -18,9 +18,13 @@ MonoBehaviour:
   cost: 2
   attack: 3
   health: 2
-  illustration: {fileID: 0}
+  illustration: {fileID: 9129685472078075231, guid: 543b010a7c192a24fb88b4aba57d9ec6, type: 3}
   effectText: 
   effect: {fileID: 0}
   onPlayEffect: {fileID: 0}
   onDeathEffect: {fileID: 0}
+  onAttackEffect: {fileID: 0}
   pierce: 0
+  noCounter: 0
+  illustrationScale: 2
+  illustrationOffset: {x: 0, y: -30}
